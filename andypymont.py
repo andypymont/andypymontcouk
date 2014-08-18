@@ -4,6 +4,10 @@ from app import app as app_homepage
 import fantasydrafts
 
 from flask import render_template
+from flask_sslify import SSLify
+
+sslify_fantasydrafts = SSLify(fantasydrafts.app)
+sslify_homepage = SSLify(app_homepage)
 
 app = DispatcherMiddleware(app_homepage, {'/drafts': fantasydrafts.app})
 
