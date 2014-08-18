@@ -36,7 +36,7 @@
       <h4>Drafts:</h4>
       <div class="list-group">
       {% for draft in drafts %}
-        <a href="{{ url_for('draft_overview', draftid=draft.id) }}" class="list-group-item">{{ draft.name }}</a>
+        <a href="{{ draft['url'] }}" class="list-group-item">{{ draft['name'] }}</a>
       {% endfor %}
       </div>
 
