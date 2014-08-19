@@ -1,3 +1,6 @@
 [submodule "fantasydrafts"]
 	path = fantasydrafts
 	url = https://github.com/andypymont/fantasydrafts.git
+[submodule "fantasypl"]
+	path = fantasypl
+	url = https://github.com/andypymont/fantasypl.git
