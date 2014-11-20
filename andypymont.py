@@ -17,8 +17,8 @@ app = DispatcherMiddleware(app_homepage, {'/drafts': fantasydrafts.app,
 @app_homepage.route('/')
 def index():
 	return render_template('index.html',
-						   drafts=[{'name': 'Necessary Roughness 2014', 'url': '/drafts/necessary-roughness-2014'},
-								   {'name': 'Fantasy Premier League 2014-15', 'url': '/drafts/fantasy-premier-league-2014-15'}])
+						   url_draft = '/drafts/necessary-roughness-2014/',
+						   url_fantasypl = '/fantasypl/')
 
 if __name__ == '__main__':
 	app.run()

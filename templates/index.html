@@ -28,16 +28,33 @@
         <div class="panel-body">
           <p>Welcome to the home page for web applications I have developed for helping with <a href="http://en.wikipedia.org/wiki/Fantasy_sports">fantasy sport</a> games.</p>
 
-          <p>At the moment this means fantasy drafts: links to test and recent fantasy drafts are in the list below. <a href="mailto:andypymont@gmail.com">Email me</a> if you are interested in running a fantasy draft using this web interface.</p>
-          
+          <p>If you have an interest in adapting these or using them for your own fantasy leagues, please <a href="mailto:andypymont@gmail.com">contact me</a>.</p>
+
         </div>
       </div>
 
-      <h4>Drafts:</h4>
-      <div class="list-group">
-      {% for draft in drafts %}
-        <a href="{{ draft['url'] }}" class="list-group-item">{{ draft['name'] }}</a>
-      {% endfor %}
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="{{ url_drafts }}"><img src="{{ url_for('static', filename='images/thumb-drafts.png') }}"></a>
+            <div class="caption"><p><h4>Fantasy Draft Board</h4></p>
+              <p>Manage fantasy league drafts. Notifies players when it is their time to pick, manages the list of available players, and allows conditional pick preferences to be specified in advance so picks can happen whilst users are offline, taking into account their previously-entered preferences for that pick.</p>
+              <p>See an example draft <a href="{{ url_draft }}">here</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="{{ url_fantasypl }}"><img src="{{ url_for('static', filename='images/thumb-fantasypl.png') }}"></a>
+            <div class="caption"><p><h4>Fantasy Premier League</h4></p>
+              <p>Manages owners' teams and player scoring for my Fantasy Premier League game. (This is a 'unique teams' / 'one copy of each player' league in the style of US sports fantasy leagues.) Includes management of the weekly 'waiver wire' where free agent players are given preferentially to players lower in the league table.</p>
+              <p>See it in action <a href="{{ url_fantasypl }}">here.</a><p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
